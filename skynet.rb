@@ -22,7 +22,7 @@ puts "4 - SOA"
 puts "5 - A"
 puts "6 - Scanner TCP/UDP"
 
-#INPUT
+
 #Escolha de opção a ser pesquisada
 puts "Escolha uma opção:"
 opcao = gets.chomp.to_i   
