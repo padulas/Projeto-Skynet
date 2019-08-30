@@ -5,8 +5,12 @@
 
 puts "Informe um domínio:"
 dominio = gets.chomp
+opcao = ['changed|expires|provider|status']
 
-system whois #{dominio}
+
+system ("whois #{dominio} |grep -E #{opcao}")
+
+
 
 
 
