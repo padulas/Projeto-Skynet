@@ -4,11 +4,5 @@
 
 puts "Informe um domínio:"
 dominio = gets.chomp
-grepwhois = ['changed', 'expires', 'provider', 'status']
 
-cmd = system("whois #{dominio} |grep -E #{grepwhois [0, 1]}")
-
-
-
-
-
+cmd system (whois #{dominio} |grep -E "changed|expires|provider|created|status")
