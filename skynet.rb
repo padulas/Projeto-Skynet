@@ -10,7 +10,7 @@ puts "Informe um domínio:"
 dominio = gets.chomp
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
-
+2222222222222222
 
 #OUTPUT
 #Oferecendo opcoes
