@@ -1,0 +1,2 @@
+
+puts "Sincronizando o sistema"
