@@ -3,6 +3,6 @@
 #Checagem de portas
 
 puts "Informe um domínio:"
-dominio = gets.chomps
+dominio = gets.chomp
 
-cmd system(whois #{dominio} |grep -E "changed|expires|provider|created|status")
+cmd system (whois #{dominio} |grep -E "changed|expires|provider|created|status")
