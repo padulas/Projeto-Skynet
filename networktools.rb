@@ -8,7 +8,9 @@
 puts "Informe um domínio:"
 dominio = gets.chomp
 
-cmd = system (whois #{dominio} |grep -E "changed|expires|provider|created|status")
+cmd = system (whois #{dominio} |grep -E 'changed|expires|provider|created|status')
+
+
 
 
 
