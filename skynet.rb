@@ -1,4 +1,4 @@
-#ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
+#ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu] 202020202020200
 #Script para consulta de informações sobre domínios nacional/internacional
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 
