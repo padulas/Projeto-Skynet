@@ -1,4 +1,4 @@
-#cat skynet.rb  Teste OK
+#cat skynet.rb  Teste Locaweb OK
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]22222222222222222222222
 #Script para consulta de informações sobre domínios nacional/internacional
 
