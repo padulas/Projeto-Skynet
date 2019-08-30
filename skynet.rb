@@ -21,7 +21,8 @@ puts "3 - TXT"
 puts "4 - SOA"
 puts "5 - A"
 puts "6 - Scanner TCP/UDP"
-
+puts "7 - Whois Nacional"
+puts "8 - Whois Internacional"
 
 #Escolha de opção a ser pesquisada
 puts "Escolha uma opção:"
@@ -45,6 +46,7 @@ elsif opcao == 5
 elsif opcao == 6
         cmd = system("nmap #{dominio}")
 
+elsif opcao == 7
 
 end
 
