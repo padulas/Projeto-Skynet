@@ -11,7 +11,7 @@ dominio = gets.chomp
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 
-
+555555555555555555555555555555555555555555
 #OUTPUT
 #Oferecendo opcoes
 puts "Agora escolha uma opção de consulta:"
