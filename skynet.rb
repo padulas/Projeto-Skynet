@@ -1,18 +1,19 @@
+
 #cat skynet.rb
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
 #Script para consulta de informações sobre domínios nacional/internacional
-
-#INPUT 
+#Criado por Daniel Gomes - padulas@hotmail.com
+ 
 #Colhendo informações
 puts "Informe um domínio:"
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 #Declarando a variável dominio
 dominio = gets.chomp
+
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 
-
-#OUTPUT
 #Oferecendo opcoes
 puts "Agora escolha uma opção de consulta:"
 puts "1 - MX"
