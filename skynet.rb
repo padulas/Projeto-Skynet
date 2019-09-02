@@ -6,7 +6,6 @@
  
 #Colhendo informações
 puts "Informe um domínio:"
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 #Declarando a variável dominio
 dominio = gets.chomp
