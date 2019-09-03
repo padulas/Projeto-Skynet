@@ -1,5 +1,5 @@
 
-#Versão Inicial
+#Versão Inicial Skynet 2019
 
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
@@ -53,6 +53,7 @@ elsif opcao == 6
         cmd = system("nmap #{dominio}")
 
 elsif opcao == 7
+	cmd = system("whois #{dominio}|grep -E ")
 
 end
 
