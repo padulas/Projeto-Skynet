@@ -54,6 +54,6 @@ end
 
 puts "Consulta concluida!!!"
 
-qqqqqqqqqqqqqq#Daniel Gomes
+#Daniel Gomes
 
 #Fim de código
