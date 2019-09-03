@@ -10,7 +10,9 @@
 puts "Informe um domínio:"
 
 #Declarando a variável dominio
-dominio = gets.chomp
+dominio = gets
+#Declarando a variável porta
+porta = gets
 
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
@@ -46,6 +48,8 @@ elsif opcao == 5
 	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
 
 elsif opcao == 6
+	puts "Informe uma porta a ser pesquisada"
+	
         cmd = system("nmap #{dominio}")
 
 elsif opcao == 7
