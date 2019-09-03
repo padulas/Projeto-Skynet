@@ -12,6 +12,8 @@ puts "Informe um domínio:"
 dominio = gets.chomp
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
+#Declarando filtros para uso do "Whois".
+filtro_whois = 'changed|expires|provider|status'
 
 #Oferecendo opcoes
 puts "Agora escolha uma opção de consulta:"
@@ -47,7 +49,8 @@ elsif opcao == 6
         system "nmap #{dominio}"
 
 elsif opcao == 7
-	system "whois #{dominio}|grep -E "
+	#Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
+	system ("whois #{dominio} |grep -E '#{filtro_whois}'")
 
 end
 
