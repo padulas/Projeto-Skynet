@@ -31,10 +31,10 @@ puts "Escolha uma opção:"
 opcao = gets.chomp.to_i   
 
 if opcao == 1
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system("nslookup -type=#{comandos[opcao]} #{dominio}")
 
 elsif opcao == 2
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system("nslookup -type=#{comandos[opcao]} #{dominio}")
 
 elsif opcao == 3
 	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
@@ -49,6 +49,7 @@ elsif opcao == 6
         cmd = system("nmap #{dominio}")
 
 elsif opcao == 7
+	cmd = system("whois #{dominio}|grep -E ")
 
 end
 
