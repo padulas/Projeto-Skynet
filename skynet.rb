@@ -1,4 +1,4 @@
-11111#Versão Melhorada
+#Versão Melhorada
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
 #Script para consulta de informações sobre domínios nacional/internacional
