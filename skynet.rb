@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-8888#Versão Melhorada
-=======
-4444#Versão Melhorada
->>>>>>> 8c60113161cea4c1672cced7cff62e42cf2b527e
+
+#Versão Melhorada
+
+#Versão Melhorada
+
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
 #Script para consulta de informações sobre domínios nacional/internacional
