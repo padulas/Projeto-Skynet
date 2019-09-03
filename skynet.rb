@@ -6,10 +6,11 @@
 #Script para consulta de informações sobre domínios nacional/internacional
 #Criado por Daniel Gomes - padulas@hotmail.com
 
+#Declarando variáveis fixas
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 #Declarando filtros para uso do "Whois".
-filtro_whois = 'changed|expires|provider|status'
+whois = 'changed|expires|provider|status'
  
 #Colhendo informações
 
@@ -52,8 +53,8 @@ elsif opcao == 6
 
 elsif opcao == 7
 	#Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
-	system ("whois #{dominio} |grep -E '#{filtro_whois}'")
-
+	system ("whois #{dominio} |grep -E #{whois}"
+	
 end
 
 #Fim das condições if,elsif,else
