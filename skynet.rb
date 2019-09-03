@@ -1,5 +1,5 @@
 
-#Versão Inicial Skynet 2019 - Whois corrigido
+#Versão Inicial Skynet 2019 - Whois OK
 
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
@@ -16,7 +16,7 @@ whois = 'changed|expires|provider|status'
 
 puts "Informe um domínio:"
 #Declarando a variável dominio
-dominio = gets.chomp
+dominio = gets
 
 #Oferecendo opcoes
 puts "Agora escolha uma opção de consulta:"
@@ -31,7 +31,7 @@ puts "8 - Whois Internacional"
 
 #Escolha de opção a ser pesquisada
 puts "Escolha uma opção:"
-opcao = gets.chomp.to_i   
+opcao = gets.chomp.to_i
 
 if opcao == 1
 	system "nslookup -type=#{comandos[opcao]} #{dominio}"
