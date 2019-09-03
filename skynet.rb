@@ -8,10 +8,8 @@
  
 #Colhendo informações
 puts "Informe um domínio:"
-
 #Declarando a variável dominio
 dominio = gets.chomp
-
 #Declarando a variável comandos
 comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 
@@ -31,25 +29,25 @@ puts "Escolha uma opção:"
 opcao = gets.chomp.to_i   
 
 if opcao == 1
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 
 elsif opcao == 2
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 
 elsif opcao == 3
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 
 elsif opcao == 4
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 
 elsif opcao == 5
-	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 
 elsif opcao == 6
-        cmd = system("nmap #{dominio}")
+        system "nmap #{dominio}"
 
 elsif opcao == 7
-	cmd = system("whois #{dominio}|grep -E ")
+	system "whois #{dominio}|grep -E "
 
 end
 
