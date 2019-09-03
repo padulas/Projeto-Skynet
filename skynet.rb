@@ -31,10 +31,10 @@ puts "Escolha uma opção:"
 opcao = gets.chomp.to_i   
 
 if opcao == 1
-	system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
 
 elsif opcao == 2
-	system("nslookup -type=#{comandos[opcao]} #{dominio}")
+	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
 
 elsif opcao == 3
 	cmd = system("nslookup -type=#{comandos[opcao]} #{dominio}")
