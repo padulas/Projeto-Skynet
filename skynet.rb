@@ -1,7 +1,5 @@
 
-#Versão Melhorada
-
-#Versão Melhorada
+#Versão Melhorada Uptaded
 
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
