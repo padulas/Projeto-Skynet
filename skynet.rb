@@ -1,4 +1,4 @@
-#1Versão Inicial Skynet 2019 - Whois corrigido
+#Versão Inicial Skynet 2019 - Whois corrigido
 
 #cat skynet.rb - Build 1.0
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
@@ -35,19 +35,19 @@ puts "Escolha uma opção:"
 opcao = gets.chomp.to_i   
 
 if opcao == 1
-	system "nslookup -type=#{comandos[opcao]} #{dominio}"
+	system "nslookup -type=#{comandos[0]} #{dominio}"
 
 elsif opcao == 2
-	system "nslookup -type=#{comandos[opcao]} #{dominio}"
+	system "nslookup -type=#{comandos[1]} #{dominio}"
 
 elsif opcao == 3
-	system "nslookup -type=#{comandos[opcao]} #{dominio}"
+	system "nslookup -type=#{comandos[2]} #{dominio}"
 
 elsif opcao == 4
-	system "nslookup -type=#{comandos[opcao]} #{dominio}"
+	system "nslookup -type=#{comandos[3]} #{dominio}"
 
 elsif opcao == 5
-	system "nslookup -type=#{comandos[opcao]} #{dominio}"
+	system "nslookup -type=#{comandos[4]} #{dominio}"
 
 elsif opcao == 6
 	puts "Informe uma porta TCP/UDP"
