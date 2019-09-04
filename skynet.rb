@@ -16,27 +16,35 @@ whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Reg
 
 #Colhendo informações:
 puts "Informe um domínio:"
-
+puts ""
 #Declarando a variável dominio
 dominio = gets.chomp
-
+puts ""
 #Oferecendo opcoes:
 puts "Agora escolha uma opção de consulta:"
+puts ""
+puts "FERRAMENTAS DNS:"
 puts "1 - MX"
 puts "2 - DNS"
 puts "3 - TXT"
 puts "4 - SOA"
 puts "5 - A"
+puts ""
+puts "FERRAMENTAS DE REDE:"
 puts "6 - Check Port TCP/UDP"
 puts "7 - Whois Nacional"
 puts "8 - Whois Internacional"
+puts ""
+puts "FERRAMENTAS DE SI"
 puts "9 - CVE's consulting"
 puts "10- Check Malware"
+puts ""
 
 #Escolha de opção a ser pesquisada
 puts "Escolha uma opção:"
 
 opcao = gets.chomp.to_i   
+puts ""
 
 if opcao == 1
 	system "nslookup -type=#{comandos[0]} #{dominio}"
@@ -75,6 +83,9 @@ end
 
 #Fim das condições if,elsif,else
 
+puts ""
+puts ""
 puts "Consulta concluida!!!"
+puts "Compartilhe o conhecimento!!!"
 
 #Fim de código
