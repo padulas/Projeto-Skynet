@@ -15,52 +15,26 @@ whoisbr = "'changed|expires|provider|status'"
 whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:'"
 
 #Colhendo informações:
-puts "Informe um domínio:"
-puts ""
+puts "Informe um domínio:\n"
 #Declarando a variável dominio
 dominio = gets.chomp
-puts ""
 #Oferecendo opcoes:
-puts "Agora escolha uma opção de consulta:"
-puts ""
+puts "\nAgora escolha uma opção de consulta:\n"\
 puts "FERRAMENTAS DNS:"
-puts "1 - MX"
-puts "2 - DNS"
-puts "3 - TXT"
-puts "4 - SOA"
-puts "5 - A"
-puts ""
+puts "1 - MX\n" , "2 - DNS\n", "3 - TXT\n", "4 - SOA\n", "5 - A\n"
 puts "FERRAMENTAS DE REDE:"
-puts "6 - Check Port TCP/UDP"
-puts "7 - Whois Nacional"
-puts "8 - Whois Internacional"
-puts ""
-puts "FERRAMENTAS DE SI"
-puts "9 - CVE's consulting"
-puts "10- Check Malware"
-puts ""
+puts "6 - Check Port TCP/UDP\n", "7 - Whois Nacional\n", "8 - Whois Internacional\n"
+puts "FERRAMENTAS DE SI\n", "9 - CVE's consulting\n", "10- Check Malware\n"
 
 #Escolha de opção a ser pesquisada
-puts "Escolha uma opção:"
+puts "\nEscolha uma opção:\n"
 
-opcao = gets.chomp.to_i   
-puts ""
+opcao = gets.chomp.to_i - 1
 
-if opcao == 1
-	system "nslookup -type=#{comandos[0]} #{dominio}"
-
-elsif opcao == 2
-	system "nslookup -type=#{comandos[1]} #{dominio}"
-
-elsif opcao == 3
-	system "nslookup -type=#{comandos[2]} #{dominio}"
-
-elsif opcao == 4
-	system "nslookup -type=#{comandos[3]} #{dominio}"
-
+if opcao >= 0 || opcap < 5
+	system "nslookup -type=#{comandos[opcao]} #{dominio}"
 elsif opcao == 5
 	system "host #{dominio} |grep address*"
-
 elsif opcao == 6
 	puts "Informe uma porta TCP/UDP"
 	portas = gets.chomp.to_i
