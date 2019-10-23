@@ -1,9 +1,9 @@
-#cat skynet.rb 
+#cat skynet.rb 2222022020
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]11111111111111111111111111
 #Script para consulta de informações sobre domínios nacional/internacional
 
 #INPUT 
-#Colhendo informações
+#Colhendo informaçõenes
 puts "Informe um domínio:"
 
 #Declarando a variável dominio
@@ -17,7 +17,7 @@ comandos = ['mx', 'ns', 'txt', 'soa', 'a']
 puts "Agora escolha uma opção de consulta:"
 puts "1 - MX"
 puts "2 - DNS"
-puts "3 - TXT"
+puts "3 - TXT" 
 puts "4 - SOA"
 puts "5 - A"
 puts "6 - Scanner TCP/UDP"
