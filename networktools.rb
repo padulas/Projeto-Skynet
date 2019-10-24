@@ -1,4 +1,4 @@
-#Ferramenta de checagem de host
+#Ferramenta de checagem de host************************
 
 #Checagem de portas
 #Whois Resumido
