@@ -1,4 +1,4 @@
-#cat skynet.rb 4444444444444433333333333333333
+#cat skynet.rb 44444444444444
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]11111111111111111111111111
 #Script para consulta de informações sobre domínios nacional/internacional
 
