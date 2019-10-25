@@ -1,4 +1,5 @@
-#Versão Inicial Skynet 2019 232323232323
+
+#Versão Inicial Skynet 2019
 
 #ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
 
@@ -16,9 +17,11 @@ whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Reg
 #Colhendo informações:
 puts "Informe um domínio:"
 puts ""
+
 #Declarando a variável dominio
 dominio = gets.chomp
 puts ""
+
 #Oferecendo opcoes:
 puts "Agora escolha uma opção de consulta:"
 puts ""
@@ -66,7 +69,9 @@ elsif opcao == 6
 	system "nmap -p #{portas} #{dominio}"
 
 elsif opcao == 7
-	#Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
+	
+#Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
+	
 	system "whois #{dominio} |grep -E #{whoisbr}"
 
 elsif opcao == 8
@@ -80,13 +85,11 @@ elsif opcao == 10
 
 elsif opcao == 11
 	system "yum install nmap"
-	
+
 end
 
 #Fim das condições if,elsif,else
 
-puts ""
-puts ""
 puts "Consulta concluida!!!"
 puts "Compartilhe o conhecimento!!!"
 
