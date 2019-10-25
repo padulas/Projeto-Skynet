@@ -1,0 +1,83 @@
+
+
+#SISTEMA DE CADASTRO DE CLIENTES E PRODUTOS - PIZZARIA E COMERCIO EM GERAL
+
+
+
+Funcionalidades:
+
+Adequação fiscal - Adequação contínua para fins de manter o cliente sempre aderente as novas regras de receita.fazenda.
+Desempenho organizacional - 
+Acompanhe seus resultados - Relatórios de vendas com periodicidade diária, quinzenal, mensal e anual.
+Controle de Estoque - Controle de estoque trabalhando em alinhamento com os pontos de vendas em tempo real.
+Controle Financeiro: Relatório de vendas por vendedos, período, produto ou categoria de produto.
+Vendas: Registro de cada ítem vendido e assim alimentando o sistema central de banco de dados, atuando juntamente com o controle de estoque.
+Perfis de usuários: Vendedor, supervisor, gerente e proprietário.
+Configuração Servidor: Requisito mínimo a ser levantado
+
+Padronização de cadastros de Clientes, Fornecedores, Produtos, Serviços, Vendedores e Colaboradores.
+
+CADASTRO DE CLIENTES DEVERÁ CONTER OS SEGUINTES CAMPOS:
+
+Integrar com sistema de identificação de chamadas:
+Código do cliente:
+Nome do cliente:
+Endereço:
+Número da residência: 
+Complemento: 
+Bairro:
+Ponto de referência:
+Telefone de contato 1: Telefone de contato 2: 
+E-mail:
+Data de aniversário:
+Obs: Sobre o cliente. Característica de produto habitualmente consumido, detalhes de excessão para algum tipo de ingrediente.
+
+Outro telefone de contato: 
+Histórico de compras deve ser exibido na tela:
+
+CADASTRO DE COLABORADORES:
+Motoboys:
+Placa da moto
+Nome do colaborador
+Data de aniversário
+Relatório de entregas
+Área do motoqueiro
+
+CADASTRO DE FORNECEDORES:
+
+Nome Fantasia:
+Razão Social:
+Endereço:
+Número:
+Complemento:
+Bairro:
+Código do município:
+Cidade:
+UF:
+CEP:
+Código do País:
+Nome do País:
+Pessoa: Física/Jurídica:
+CNPJ:
+Inscrição Estadual:
+Inscrição Municipal:
+Tipo de Contribuinte:
+E-mail:
+Telefones:
+Contato: (Pessoa)
+
+DELÍVERY:
+
+VENDEDORES:
+
+RELATÓRIOS GERENCIAIS:
+
+Relatórios de vendas
+Relatórios de entregas
+
+NOTIFICAÇÂO NA COZINHA:
+Reduz a possibilidade de erro por parte de quem afere o pedido ou por parte de quem faz o produto.
+
+
+
+
