@@ -43,6 +43,7 @@ puts "10 - Check Malware"
 puts "11 - Instalar Aplicações"
 
 #Escolha de opção a ser pesquisada
+puts "\n"
 puts "Escolha uma opção:"
 
 opcao = gets.chomp.to_i   
