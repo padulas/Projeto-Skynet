@@ -36,8 +36,8 @@ puts "8 - Whois Internacional"
 puts ""
 puts "FERRAMENTAS DE SI"
 puts "9 - CVE's consulting"
-puts "10- Check Malware"
-puts ""
+puts "10 - Check Malware"
+puts "11 - Instalar Aplicações"
 
 #Escolha de opção a ser pesquisada
 puts "Escolha uma opção:"
@@ -78,6 +78,9 @@ elsif opcao == 9
 elsif opcao == 10
 	system "nmap -sV --script=http-malware-host #{dominio}"
 
+elsif opcao == 11
+	system "yum install nmap"
+	
 end
 
 #Fim das condições if,elsif,else
