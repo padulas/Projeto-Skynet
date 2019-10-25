@@ -15,8 +15,9 @@ whoisbr = "'changed|expires|provider|status'"
 whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:'"
 
 #Colhendo informações:
+puts "\n"
 puts "Informe um domínio:"
-puts ""
+puts "\n"
 
 #Declarando a variável dominio
 dominio = gets.chomp
@@ -43,7 +44,6 @@ puts "10 - Check Malware"
 puts "11 - Instalar Aplicações"
 
 #Escolha de opção a ser pesquisada
-puts "\n"
 puts "Escolha uma opção:"
 
 opcao = gets.chomp.to_i   
