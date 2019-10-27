@@ -12,36 +12,56 @@ whoisbr = "'changed|expires|provider|status'"
 whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:'"
 
 #Colhendo informações:
-puts "\n"
-puts "Informe um domínio:"
+	require 'colorize'
+
 puts "\n"
 
-#Declarando a variável "dominio"
+puts "Informe um domínio:".white #Declarando a variável "dominio"
 dominio = gets.chomp
+
+puts "\n"
 puts "\n"
 
 #Exibe opções ao usuário
-puts "Agora escolha uma opção de consulta:"
+	require 'colorize'
+puts "Agora escolha uma opção de consulta:".white
 puts "\n"
-puts "FERRAMENTAS DNS:"
-puts "1 - MX"
-puts "2 - DNS"
-puts "3 - TXT"
-puts "4 - SOA"
-puts "5 - A"
+require 'colorize'
+	puts "FERRAMENTAS DNS:".white
+	require 'colorize' 
+	puts "1.white require 'colorize' - MX".yellow
+	require 'colorize'
+	puts "2 - DNS".yellow
+	require 'colorize'
+	puts "3 - TXT".yellow
+		require 'colorize'
+	puts "4 - SOA".yellow
+	require 'colorize'
+	puts "5 - A".yellow
+	require 'colorize'
+	puts "\n"
+	require 'colorize'
+	puts "FERRAMENTAS DE REDE:".white
+	require 'colorize'
+	puts "6 - Check Port TCP/UDP".yellow
+	require 'colorize'
+	puts "7 - Whois Nacional".yellow
+	require 'colorize'
+	puts "8 - Whois Internacional".yellow
 puts "\n"
-puts "FERRAMENTAS DE REDE:"
-puts "6 - Check Port TCP/UDP"
-puts "7 - Whois Nacional"
-puts "8 - Whois Internacional"
+	require 'colorize'
+	puts "FERRAMENTAS DE SI".white
+	require 'colorize'
+	puts "9 - CVEs consulting".yellow
+	require 'colorize'
+	puts "10 - Check Malware".yellow
+	require 'colorize'
+	puts "11 - checagem de portas".yellow
 puts "\n"
-puts "FERRAMENTAS DE SI"
-puts "9 - CVE's consulting"
-puts "10 - Check Malware"
-puts "11 - checagem de portas"
 
 #Escolha de opção a ser pesquisada
-puts "Escolha uma opção:"
+	require 'colorize'
+puts "Escolha uma opção:".white
 
 #Declarando a variável "opcao"
 opcao = gets.chomp.to_i   
@@ -62,10 +82,11 @@ when 4
 	system "nslookup -type=#{comandos[3]} #{dominio}"
 
 when 5
-	system 'host #{dominio} |grep address*'
+	system "host #{dominio} |grep address*"
 
 when 6
-	"Informe uma porta TCP/UDP"
+	require 'colorize'
+	puts 'Informe uma porta TCP/UDP'.gold
 end
 
 #Declarando variável "portas da opcao "8""
@@ -93,16 +114,40 @@ when 11
 	system "Instalar ferramentas"
 end
 
+puts "\n"
 #Fim de estrutura condicional
-"Consulta concluida!!!"
-"Compartilhe o conhecimento!!!"
+puts "\n"
+puts "\n"
+puts "\n"
+	require 'colorize' 
+	puts '                                        Consulta concluida!!!'.white
+	require 'colorize' 
+	puts "                                     Compartilhe o conhecimento".white
 puts "\n"
 
-"OBS: Caso a opcao 9-10 apresente erro instale o NMAP com os seguintes comandos:"
-"Distribuição Debian e derivados:"
-"#apt update -y ; apt install nmap -y"
+	require 'colorize'
+	puts '           OBS: Caso a opcao 9-10 apresente erro instale o NMAP com os seguintes comandos:'.red
+puts "\n"
 
-"Distribuição Redhat Fedora e derivados"
-"###############################################################################"
+require 'colorize'
+	puts ' ################################################################################################'.yellow
+    require 'colorize'
+    puts '#                                 Distribuição Debian e derivados:                               #'.white
+	require 'colorize'
+	puts '#                               apt update -y ; apt install nmap -y                              #'.yellow             
+
+	require 'colorize'
+	puts '#                              Distribuição Redhat Fedora e derivados                            #'.white
+	require 'colorize'
+	puts '#                                  yum update -y ; install nmap -y                               #'.yellow
+	require 'colorize'
+	puts '#              Caso sua versão seja acima da versão 30 considere o uso do seguinte comando:      #'.white
+	require 'colorize'
+	puts '#                                  dnf uptate -y ; dnf install nmap -y"                          #'.yellow
+	require 'colorize'
+	puts ' ################################################################################################'.yellow
+puts "\n"
+
+	system "ruby skynet.rb"
 
 #Fim de código

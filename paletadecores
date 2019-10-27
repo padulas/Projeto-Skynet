@@ -1,0 +1,30 @@
+
+PALETA DE CORES:
+
+"Início da tag" "[\e[1m TEXTOAQUI \e[0m ]" "Fecha tag"
+
+Código	Efeito
+0	desativa todos os atributos
+1	ativa o modo brilho
+4	ativa o modo sublinhado
+5	ativa o modo pisca-pisca
+7	troca a cor do primeiro plano pela cor de fundo
+8	oculta o texto (cor do texto igual ao do fundo)
+30	texto na cor preta
+31	texto na cor vermelha
+32	texto na cor verde
+33	texto na cor amarela
+34	texto na cor azul
+35	texto na cor magenta
+36	texto na cor ciano
+37	texto na cor branca
+39	texto na cor padrão
+40	fundo na cor preta
+41	fundo na cor vermelha
+42	fundo na cor verde
+43	fundo na cor amarela
+44	fundo na cor azul
+45	fundo na cor magenta
+46	fundo na cor ciano
+47	fundo na cor branca
+49	fundo na cor padrão
