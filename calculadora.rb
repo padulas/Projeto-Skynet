@@ -2,6 +2,7 @@
 #Calculadora:
 #Declarando variáveis - N1 e N2
 puts "Sua mais nova calculadora em Ruby"
+puts "\n"
 puts "Informe o primeiro número"
 
 #Entrada de dados
@@ -31,16 +32,23 @@ case opcao
 
 when 1
     N1 + N2
+    resultado = N1 + N2
 
 when 2
     N1 - N2
+    resultado = N1 - N2
 
 when 3
     N1 * N2
-    
+    resultado = N1 * N2
+
 when 4
     N1 / N2
+    resultado = N1 / N2
 
 when 5
     exit
 end
+
+puts "#{resultado}"
+
