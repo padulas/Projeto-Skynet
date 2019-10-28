@@ -24,7 +24,7 @@ puts "4 - Divisão"
 puts "5 - Sair do programa.
 
 puts "Selecione uma opção"
-gets.chomp
+opcao = gets.chomp
 
 case opcao
 
