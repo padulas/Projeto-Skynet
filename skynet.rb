@@ -98,7 +98,6 @@ portas = gets.chomp.to_i
 when 7
 
 #OBS: Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
-	
 	system "whois #{dominio} |grep -E #{whoisbr}"
 
 when 8
@@ -120,9 +119,9 @@ puts "\n"
 puts "\n"
 puts "\n"
 require 'colorize' 
-	puts '                                        Consulta concluida!!!'.white
+	puts '                                 Consulta concluida!!!'.white
 require 'colorize' 
-	puts "                                     Compartilhe o conhecimento".white
+	puts "                               Compartilhe o conhecimento".white
 puts "\n"
 
 require 'colorize'
