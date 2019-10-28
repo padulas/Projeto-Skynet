@@ -28,39 +28,39 @@ puts "Agora escolha uma opção de consulta:".white
 puts "\n"
 require 'colorize'
 	puts "FERRAMENTAS DNS:".white
-	require 'colorize' 
+require 'colorize' 
 	puts "1.white require 'colorize' - MX".yellow
-	require 'colorize'
+require 'colorize'
 	puts "2 - DNS".yellow
-	require 'colorize'
+require 'colorize'
 	puts "3 - TXT".yellow
-		require 'colorize'
+require 'colorize'
 	puts "4 - SOA".yellow
-	require 'colorize'
+require 'colorize'
 	puts "5 - A".yellow
-	require 'colorize'
+require 'colorize'
 	puts "\n"
-	require 'colorize'
+require 'colorize'
 	puts "FERRAMENTAS DE REDE:".white
-	require 'colorize'
+require 'colorize'
 	puts "6 - Check Port TCP/UDP".yellow
-	require 'colorize'
+require 'colorize'
 	puts "7 - Whois Nacional".yellow
-	require 'colorize'
+require 'colorize'
 	puts "8 - Whois Internacional".yellow
 puts "\n"
-	require 'colorize'
+require 'colorize'
 	puts "FERRAMENTAS DE SI".white
-	require 'colorize'
+require 'colorize'
 	puts "9 - CVEs consulting".yellow
-	require 'colorize'
+require 'colorize'
 	puts "10 - Check Malware".yellow
-	require 'colorize'
+require 'colorize'
 	puts "11 - checagem de portas".yellow
 puts "\n"
 
 #Escolha de opção a ser pesquisada
-	require 'colorize'
+require 'colorize'
 puts "Escolha uma opção:".white
 
 #Declarando a variável "opcao"
@@ -85,7 +85,7 @@ when 5
 	system "host #{dominio} |grep address*"
 
 when 6
-	require 'colorize'
+require 'colorize'
 	puts 'Informe uma porta TCP/UDP'.gold
 end
 
@@ -119,32 +119,32 @@ puts "\n"
 puts "\n"
 puts "\n"
 puts "\n"
-	require 'colorize' 
+require 'colorize' 
 	puts '                                        Consulta concluida!!!'.white
-	require 'colorize' 
+require 'colorize' 
 	puts "                                     Compartilhe o conhecimento".white
 puts "\n"
 
-	require 'colorize'
+require 'colorize'
 	puts '           OBS: Caso a opcao 9-10 apresente erro instale o NMAP com os seguintes comandos:'.red
 puts "\n"
 
 require 'colorize'
 	puts ' ################################################################################################'.yellow
-    require 'colorize'
+   require 'colorize'
     puts '#                                 Distribuição Debian e derivados:                               #'.white
-	require 'colorize'
+require 'colorize'
 	puts '#                               apt update -y ; apt install nmap -y                              #'.yellow             
 
-	require 'colorize'
+require 'colorize'
 	puts '#                              Distribuição Redhat Fedora e derivados                            #'.white
-	require 'colorize'
+require 'colorize'
 	puts '#                                  yum update -y ; install nmap -y                               #'.yellow
-	require 'colorize'
+require 'colorize'
 	puts '#              Caso sua versão seja acima da versão 30 considere o uso do seguinte comando:      #'.white
-	require 'colorize'
+require 'colorize'
 	puts '#                                  dnf uptate -y ; dnf install nmap -y"                          #'.yellow
-	require 'colorize'
+require 'colorize'
 	puts ' ################################################################################################'.yellow
 puts "\n"
 

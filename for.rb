@@ -1,4 +1,4 @@
-fruits = ['Maçã', 'Uva', 'Morango']
+fruits = ['Maçã', 'Uva', 'Morango, tomate']
 
 for fruit in fruits 
   puts fruit
