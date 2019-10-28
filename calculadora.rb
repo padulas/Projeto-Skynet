@@ -21,9 +21,10 @@ puts "1 - Soma"
 puts "2 - Subtração"
 puts "3 - Multiplicação"
 puts "4 - Divisão"
-puts "5 - Sair do programa.
+puts "5 - Sair do programa"
 
-puts "Selecione uma opção"
+puts "Escolha uma opcao"
+
 opcao = gets.chomp
 
 case opcao
