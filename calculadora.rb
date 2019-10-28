@@ -31,7 +31,6 @@ case opcao
 
 when 1
     N1 + N2
-N1 + N2
 
 when 2
     N1 - N2
