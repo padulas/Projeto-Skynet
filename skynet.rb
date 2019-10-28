@@ -23,7 +23,7 @@ puts "\n"
 puts "\n"
 
 #Exibe opções ao usuário
-	require 'colorize'
+require 'colorize'
 puts "Agora escolha uma opção de consulta:".white
 puts "\n"
 require 'colorize'

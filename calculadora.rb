@@ -44,6 +44,4 @@ when 4
 when 5
     exit
 
-case 
-
-    
+case
