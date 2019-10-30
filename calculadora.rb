@@ -33,22 +33,22 @@ case opcao
 when 1
     N1 + N2
     resultado = N1 + N2
-    puts resultado
+    print "#{resultado}"
     
 when 2
     N1 - N2
     resultado = N1 - N2
-    puts resultado
+    print "#{resultado}"
 
 when 3
     N1 * N2
     resultado = N1 * N2
-    puts resultado
+    print "#{resultado}"
 
 when 4
     N1 / N2
     resultado = N1 / N2
-    puts resultado
+    print "#{resultado}"
 
 when 5
     exit
