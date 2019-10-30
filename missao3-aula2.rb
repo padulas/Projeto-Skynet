@@ -1,5 +1,6 @@
- #Missão 3 - Aula 2
-# Crie um programa que que receba dois números inteiros e no final exiba a soma, subtração, adição e divisão entre eles.
+
+#Missão 3 - Aula 2
+#Crie um programa que receba dois números inteiros e no final exiba a soma, subtração, adição e divisão entre eles.
 
 puts "Calculadora 4 operações"
 
@@ -19,8 +20,3 @@ puts "Resultado da soma: #{soma}"
 puts "Resultado da subtracao: #{subtracao}"
 puts "Resultado da multiplicacao: #{multiplicacao}"
 puts "Resultado da divisao: #{divisao}"
-
-
-
-
-

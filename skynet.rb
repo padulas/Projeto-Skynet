@@ -17,7 +17,7 @@ whoiscom = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Reg
 puts "\n"
 
 puts "Informe um domínio:".white #Declarando a variável "dominio"
-dominio = gets.chomp
+dominio = gets.chomp.to_s
 
 puts "\n"
 puts "\n"
@@ -64,7 +64,7 @@ require 'colorize'
 puts "Escolha uma opção:".white
 
 #Declarando a variável "opcao"
-opcao = gets.chomp.to_i   
+opcao = gets.chomp.to_i
 puts "\n"
 
 #Opcoes estrutura de controle
