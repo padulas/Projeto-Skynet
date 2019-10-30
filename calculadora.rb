@@ -1,19 +1,18 @@
 
 #Calculadora:
-#Declarando variáveis - N1 e N2
 puts "Sua mais nova calculadora em Ruby"
 puts "\n"
-puts "Informe o primeiro número"
 
+puts "Informe o primeiro número"
 #Entrada de dados
-#Declarando variáveis:
 
 #Declarando vaviável 1
-N1 = gets.chomp
+n1 = gets.chomp.to_i
+
 puts "Informe um segundo número"
 
 #Declarando variável 2
-N2 = gets.chomp
+n2 = gets.chomp.to_i
 
 puts "\n"
 puts "Selecione qual operação a ser feita"
@@ -23,36 +22,29 @@ puts "2 - Subtração"
 puts "3 - Multiplicação"
 puts "4 - Divisão"
 puts "5 - Sair do programa"
-
+puts "\n"
 puts "Escolha uma opcao"
+puts "\n"
 
-opcao = gets.chomp
+opcao = gets.chomp.to_i
 
 case opcao
 
 when 1
-    N1 + N2
-    resultado = N1 + N2
-    print "#{resultado}"
+    resultado = n1 + n2
     
 when 2
-    N1 - N2
-    resultado = N1 - N2
-    print "#{resultado}"
-
+    resultado = n1 - n2
+    
 when 3
-    N1 * N2
-    resultado = N1 * N2
-    print "#{resultado}"
-
+    resultado = n1 * n2
+    
 when 4
-    N1 / N2
-    resultado = N1 / N2
-    print "#{resultado}"
-
+    resultado = n1 / n2
+    
 when 5
     exit
 end
 
-puts "#{resultado}"
+puts "E o resultado de seu cálculo é: #{resultado}"
 
