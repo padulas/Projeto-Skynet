@@ -1,11 +1,12 @@
-day = 'Suturday' 
  
-if day == 'Sunday' 
-  lunch = 'special'
-else
-  lunch = 'normal'
+puts "Informe um dia"
+day = gets.chomp
+if day == 'Segunda' 
+  lanche = 'Especial'
+
+elsif day == 'Terça'
+  lanche = 'Gourmet'
 end
  
-puts "Lunch is #{lunch} today"
-
+puts "O lanche hoje é #{lanche}"
 
