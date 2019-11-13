@@ -1,9 +1,7 @@
 
-vogais = ['a', 'e', 'i', 'o', 'u']
-count = 1
-
-for [Daniel] in fruits
-	if Daniel == vogais
-		count = count +1
-	end
+fruits = ['Maçã', 'Uva', 'Morango']
+ 
+for fruit in fruits
+  puts fruit
 end
+
