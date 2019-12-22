@@ -29,7 +29,7 @@ puts "\n"
 require 'colorize'
 	puts "FERRAMENTAS DNS:".white
 require 'colorize' 
-	puts "1.white require 'colorize' - MX".yellow
+	puts "1 - MX".yellow
 require 'colorize'
 	puts "2 - DNS".yellow
 require 'colorize'
@@ -86,7 +86,7 @@ when 5
 
 when 6
 require 'colorize'
-	puts 'Informe uma porta TCP/UDP'.gold
+	puts 'Informe uma porta TCP/UDP'.yellow
 end
 
 #Declarando variável "portas da opcao "8""

@@ -19,3 +19,5 @@ system ("whois #{dominio} |grep -E #{opcao}")
 
 
 
+
+
