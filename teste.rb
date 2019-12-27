@@ -23,11 +23,11 @@ print ")"
 br = ['changed|expires|provider|status']
 int = ['Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:']
 
-case opcao == 1
-     system "whois #{dominio} |grep -E #{br[0]}"
-
-when opcao == 2
-     system "whois #{dominio} |grep -E #{int[0]}"
+case opcao
+when 1
+    system "whois #{dominio} |grep -E #{br}"
+when 2
+     system "whois #{dominio} |grep -E #{int}"
 end
 
      puts "Consulta DNS"
