@@ -36,10 +36,3 @@ puts "Reinicie seu servidor para aplicar algumas configurações"
 
 #Adicionar segundo script a inicialização do sistema para continuar o processo de instalação.
 #system "ruby /root/script2.rb"
-
-
-
-
-
-
-
