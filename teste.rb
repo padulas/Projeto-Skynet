@@ -1,46 +1,54 @@
-#Versão Inicial Skynet 2019
-##ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
-##Script para consulta de informações sobre domínios nacional/internacional
-##Criado por Daniel Gomes - padulas@hotmail.com
-##Ferramenta de checagem de host************************
+puts "\n"
+print "INFORME UM DOMÍNIO/HOST: "
+puts "\n"
 
-#Checagem de portas
-#Whois Resumido
-#print "Vamos fazer uma análise:"
-#print "Informe um domínio:"
-#dominio = gets.chomp
-#
-##Consulta Whois domínio Nacional / Internacional
+dominio = gets.chomp
+puts "\n"
+
+puts "INFORMAÇÕES DO HOST: "
+puts "\n"
+system "host #{dominio} |grep address --color"
+puts "\n"
+
+#Consulta Whois domínio Nacional / Internacional
 puts "Consulta Whois - Estado do domínio nacional / internacional:"
-puts "Escolha uma das opções listadas abaixo:"
-puts "Domínio Nacional - BR"
-puts "Domínio Internacional"
-print "("
-opcao = gets.chomp
-print ")"
 
 #Variável de filtro do whois
-br = ['changed|expires|provider|status']
-int = ['Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:']
+br = "|grep -E 'changed|expires|provider|status' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.'"
+int = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:'"
 
-case opcao
-when 1
-    system "whois #{dominio} |grep -E #{br}"
-when 2
-     system "whois #{dominio} |grep -E #{int}"
-end
+   if dominio.include? '.br'
+   system "whois #{dominio} #{br}"
 
-     puts "Consulta DNS"
+   else
+   system "whois #{dominio} |grep -E #{int}"
 
-       puts "Checagem de portas"
+   end
+
+puts "\n"
+
+    puts "CONSULTA DNS:"
+    system "nslookup -type=ns #{dominio}"
+
+puts "\n"
+
+    puts "CHECAGEM DE PORTAS:"
+
        print "Informe uma porta a ser consultada ou um range de portas ex:"
        print "80-443"
+
+       puts "\n"
+
        portas = gets.chomp.to_i
        system "nmap -p #{portas} #{dominio}"
 
+       puts "\n"
+
           puts "Teste de comunicação ping:"
-          puts "Quantos saltos ?"
-          system "ping -c #{saltos} #{dominio}"
+
+          system "ping -c 5 #{dominio}"
+
+       puts "\n"
 
           require 'colorize'
           puts '                                 Consulta concluida!!!'.white
@@ -49,12 +57,3 @@ end
           puts "                               Compartilhe o conhecimento".white
 
           puts "\n"
-                            require 'colorize'
-
-                                puts ' ################################################################################################'.yellow
-                                require 'colorize'
-                                    puts '#                                 Distribuição Debian e derivados:                               #'.white
-                                    require 'colorize'
-                                        puts '#                               apt update -y ; apt install nmap -y                              #'.yellow
-
-                                        require 'colorize'
