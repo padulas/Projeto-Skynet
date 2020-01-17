@@ -1,0 +1,66 @@
+SKYNET - Sistema de análise de host:
+
+
+
+
+
+
+
+INFORMAÇÕES DO HOST:
+terra.com.br has address 208.84.244.116
+terra.com.br has IPv6 address 2604:600:0:aaaa:208:84:244:116
+Consulta Whois - Estado do domínio nacional / internacional:
+owner:       Terra Networks Brasil S.A.
+ownerid:     91.088.328/0001-67
+owner-c:     MPL4
+changed:     20190203
+expires:     20271130
+status:      published
+provider:    TERRA (83)
+person:      Hostmaster Terra Networks
+e-mail:      domain@terra.com.br
+changed:     20200110
+person:      Hostmaster Terra Networks
+e-mail:      domain@terra.com.br
+changed:     20170111
+person:      Cobrança Terra Networks
+e-mail:      idcobranca@terra.com.br
+changed:     20160926
+INFORMAÇÕES ENTRADAS DNS:
+<SERVIDORES DNS:>
+
+terra.com.br    nameserver = b.dns.terra.com.br.
+terra.com.br    nameserver = c.dns.terra.com.
+terra.com.br    nameserver = d.dns.terra.com.br.
+terra.com.br    nameserver = a.dns.terra.com.
+<ENTRADA MX:>
+terra.com.br    mail exchanger = 10 vip-us-br-mx.terra.com.
+<ENTRADA TXT:>
+terra.com.br    text = "_globalsign-domain-verification=yP_b_SdxJ94OckhYum8qryzp91puTl_Cyn_4NPJU6F"
+terra.com.br    text = "v=spf1 ip4:200.176.10.0/23 ip4:200.176.2.0/23 ip4:200.154.152.0/24 ip4:208.84.242.0/23 ip4:98.142.233.64/28 ip4:98.142.235.128/26 include:ti-spf.terra.com.br -all"
+terra.com.br    text = "ic3q7Dp5+uji49y2lAydCPmBtfIT0RJQpgTyOuP733A="
+terra.com.br    text = "_globalsign-domain-verification=62hhYO8OzymvnlKVkJaARjQPCIs88DUENlqK_-7zGM"
+<ENTRADA . TIPO A:>
+Address: 208.84.244.116
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2020-01-10 18:30 -03
+Nmap scan report for terra.com.br (208.84.244.116)
+Host is up (0.14s latency).
+rDNS record for 208.84.244.116: www.terra.com.br
+Not shown: 421 filtered ports
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 13.10 seconds
+Teste de comunicação ping:
+PING terra.com.br (208.84.244.116) 56(84) bytes of data.
+64 bytes from www.terra.com.br (208.84.244.116): icmp_seq=1 ttl=52 time=139 ms
+64 bytes from www.terra.com.br (208.84.244.116): icmp_seq=2 ttl=53 time=139 ms
+64 bytes from www.terra.com.br (208.84.244.116): icmp_seq=3 ttl=52 time=139 ms
+64 bytes from www.terra.com.br (208.84.244.116): icmp_seq=4 ttl=53 time=139 ms
+64 bytes from www.terra.com.br (208.84.244.116): icmp_seq=5 ttl=53 time=139 ms
+
+--- terra.com.br ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
+rtt min/avg/max/mdev = 139.720/139.822/139.897/0.343 ms

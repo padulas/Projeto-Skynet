@@ -1,8 +1,10 @@
 puts "\n"
 print "INFORME UM DOMÍNIO/HOST: "
-puts "\n"
-
 dominio = gets.chomp
+puts "\n"
+puts "INFORME UMA PORTA OU UM RANGE DE PORTAS"
+puts "Ex: PORTA ÚNICA: 80, RANGE DE PORTAS: Ex: 80-443"
+portas = gets.chomp
 puts "\n"
 
 puts "INFORMAÇÕES DO HOST: "
@@ -14,8 +16,9 @@ puts "\n"
 puts "Consulta Whois - Estado do domínio nacional / internacional:"
 
 #Variável de filtro do whois
-br = "|grep -E 'changed|expires|provider|status' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.'"
-int = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:'"
+
+br = "|grep -E 'changed|expires|provider|status|owner|ownerid' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color"
+int = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:' --color"
 
    if dominio.include? '.br'
    system "whois #{dominio} #{br}"
@@ -23,23 +26,16 @@ int = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registra
    else
    system "whois #{dominio} |grep -E #{int}"
 
-   end
+  end
 
 puts "\n"
 
     puts "CONSULTA DNS:"
+    puts "DNS UTILIZADO PARA CONSULTA:"
+    puts "Open-DNS"
     system "nslookup -type=ns #{dominio}"
 
-puts "\n"
-
-    puts "CHECAGEM DE PORTAS:"
-
-       print "Informe uma porta a ser consultada ou um range de portas ex:"
-       print "80-443"
-
-       puts "\n"
-
-       portas = gets.chomp.to_i
+    puts "LISTAGEM DE PORTAS: "
        system "nmap -p #{portas} #{dominio}"
 
        puts "\n"
@@ -57,3 +53,4 @@ puts "\n"
           puts "                               Compartilhe o conhecimento".white
 
           puts "\n"
+          
