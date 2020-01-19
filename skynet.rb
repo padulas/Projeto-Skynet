@@ -96,7 +96,6 @@ portas = gets.chomp.to_i
 	case opcao 
 
 when 7
-
 #OBS: Importante definir a variável "opcao conforme: opcao = "'palavras_entre_aspas_simples dentro de aspas duplas'"
 	system "whois #{dominio} |grep -E #{whoisbr}"
 

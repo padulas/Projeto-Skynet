@@ -1,46 +1,50 @@
-#Versão Inicial Skynet 2019
-##ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-linux-gnu]
-##Script para consulta de informações sobre domínios nacional/internacional
-##Criado por Daniel Gomes - padulas@hotmail.com
-##Ferramenta de checagem de host************************
+puts "\n"
+print "INFORME UM DOMÍNIO/HOST: "
+dominio = gets.chomp
+puts "\n"
+puts "INFORME UMA PORTA OU UM RANGE DE PORTAS"
+puts "Ex: PORTA ÚNICA: 80, RANGE DE PORTAS: Ex: 80-443"
+portas = gets.chomp
+puts "\n"
 
-#Checagem de portas
-#Whois Resumido
-#print "Vamos fazer uma análise:"
-#print "Informe um domínio:"
-#dominio = gets.chomp
-#
-##Consulta Whois domínio Nacional / Internacional
+puts "INFORMAÇÕES DO HOST: "
+puts "\n"
+system "host #{dominio} |grep address --color"
+puts "\n"
+
+#Consulta Whois domínio Nacional / Internacional
 puts "Consulta Whois - Estado do domínio nacional / internacional:"
-puts "Escolha uma das opções listadas abaixo:"
-puts "Domínio Nacional - BR"
-puts "Domínio Internacional"
-print "("
-opcao = gets.chomp
-print ")"
 
 #Variável de filtro do whois
-br = ['changed|expires|provider|status']
-int = ['Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:']
 
-case opcao
-when 1
-    system "whois #{dominio} |grep -E #{br}"
-when 2
-     system "whois #{dominio} |grep -E #{int}"
-end
+br = "|grep -E 'changed|expires|provider|status|owner|ownerid' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color"
+int = "'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:' --color"
 
-     puts "Consulta DNS"
+   if dominio.include? '.br'
+   system "whois #{dominio} #{br}"
 
-       puts "Checagem de portas"
-       print "Informe uma porta a ser consultada ou um range de portas ex:"
-       print "80-443"
-       portas = gets.chomp.to_i
+   else
+   system "whois #{dominio} |grep -E #{int}"
+
+  end
+
+puts "\n"
+
+    puts "CONSULTA DNS:"
+    puts "DNS UTILIZADO PARA CONSULTA:"
+    puts "Open-DNS"
+    system "nslookup -type=ns #{dominio}"
+
+    puts "LISTAGEM DE PORTAS: "
        system "nmap -p #{portas} #{dominio}"
 
+       puts "\n"
+
           puts "Teste de comunicação ping:"
-          puts "Quantos saltos ?"
-          system "ping -c #{saltos} #{dominio}"
+
+          system "ping -c 5 #{dominio}"
+
+       puts "\n"
 
           require 'colorize'
           puts '                                 Consulta concluida!!!'.white
@@ -49,12 +53,4 @@ end
           puts "                               Compartilhe o conhecimento".white
 
           puts "\n"
-                            require 'colorize'
-
-                                puts ' ################################################################################################'.yellow
-                                require 'colorize'
-                                    puts '#                                 Distribuição Debian e derivados:                               #'.white
-                                    require 'colorize'
-                                        puts '#                               apt update -y ; apt install nmap -y                              #'.yellow
-
-                                        require 'colorize'
+          
