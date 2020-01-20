@@ -74,34 +74,19 @@ echo "<p>ECHO/REPLY-PING</p>";
 $output = shell_exec("ping -c 5 $dominio");
 echo "<pre>$output</pre>";
 
-$br = "'owner|ownerid|changed|expires|provider|status|e-mail' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color"
-$int = ""
+$br = "'owner|ownerid|changed|expires|provider|status|e-mail' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color";
+$int = "Name|Updated Date|Creation Date|Registry Expiry Date|Registrar|Name Server";
 
-echo "<b>INFORMAÇÕES WHOIS:</b>";
-if ($dominio.include ".br"){
+echo "<b>INFORMAÇÕES WHOIS DANIEL:</b>";
 
-        if ($dominio.include ".br"){
-                $output = shell_exec(whois $dominio |grep -E $br);
-            } elseif ($a == $b) {
-                echo "a is equal to b";
-            } else {
-                echo "a is smaller than b";
-            }
-            ?>
+<?php
 
-}
-else {
-$output = shell_exec("whois $dominio |grep -E 'owner|ownerid|changed|expires|provider|status|e-mail' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color");
+$output = shell_exec("whois $dominio");
 echo "<pre>$output</pre>";
-}
 
 
-
-}
-
+            ?>
 ?>
-
-
 
 <br>
                 <br>
@@ -109,4 +94,3 @@ echo "<pre>$output</pre>";
 
 </body>
 </html>
-
