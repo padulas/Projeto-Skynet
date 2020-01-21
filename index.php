@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!--<center><img src="locaweb.png"></center>--!>
+<center><img src="locaweb.png"></center>
 
 
         <br>
@@ -16,10 +16,10 @@
         <!FORMULÁRIO>
 <hr></hr>
 
-<font face="verdana" size="2"> <b><p>SISTEMA DE ANÁLISE DE HOST</b></p></font>
+<font color="red" face="verdana" size="2"> <b><p>SISTEMA DE ANÁLISE DE HOST</b></p></font>
 
 
-<font face="verdana" size="2"> <b><p>Informe um domínio/host:</b></p></font>
+<font color="red" face="verdana" size="2"> <b><p>Informe um domínio/host:</b></p></font>
 
 
 
@@ -36,7 +36,7 @@
 
                 </form>
 
-        <h4><b><h3 style="color:orange;">RESULTADO:</b></h3>
+        <h4><b><h3 style="color:red;">RESULTADO:</b></h3>
 
 <?php
 
@@ -74,19 +74,28 @@ echo "<p>ECHO/REPLY-PING</p>";
 $output = shell_exec("ping -c 5 $dominio");
 echo "<pre>$output</pre>";
 
-$br = "'owner|ownerid|changed|expires|provider|status|e-mail' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color";
-$int = "Name|Updated Date|Creation Date|Registry Expiry Date|Registrar|Name Server";
+echo "<b>INFORMAÇÕES WHOIS:</b>";
 
-echo "<b>INFORMAÇÕES WHOIS DANIEL:</b>";
+$br = "|grep -iE 'person|e-mail|changed|expires|provider|status|owner|ownerid|nsstat' |grep -v '% provider, contact handle (ID), CIDR block, IP and ASN.' --color";
+$int = "|grep -E 'Registry Expiry Date:|Domain Name:|Updated Date:|Creation Date:|Registrar:' --color";
 
-<?php
+$termo = '.br';
+$pattern = '/' . $termo . '/';//Padrão a ser encontrado na string $dominio
 
-$output = shell_exec("whois $dominio");
+if (preg_match($pattern, $dominio)) {
+
+ $output = shell_exec("whois $dominio $br");
 echo "<pre>$output</pre>";
 
+} else {
+  $output = shell_exec("whois $dominio $int");
+echo "<pre>$output</pre>";
 
-            ?>
+}
 ?>
+
+
+
 
 <br>
                 <br>
